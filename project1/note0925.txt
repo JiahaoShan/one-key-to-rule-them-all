@@ -1,0 +1,21 @@
+# CS 564 Project 1
+# Example SQL commands:
+
+# create table 'house'
+> create table house (plotno INTEGER PRIMARY KEY, address VARvarchar(20));
+
+# show all tables
+> .tables
+
+# turn on foreign keys
+> PRAGMA FOREIGN_KEYS=ON; // enable foreign keys in SQLite3 (by default is disabled)
+
+# create table 'resident'
+> create table resident (ssn INTEGER PRIMARY KEY, doorno INTEGER, name VARvarchar(10), doorno REFERENCES house(plotno));
+
+# insert a record to table 'house'
+> insert into house values (64, '1001 University Avenue');
+
+# insert a record to table 'resident'
+> insert into resident values (782, 64, 'John');
+

@@ -1,0 +1,10 @@
+DROP INDEX IF EXISTS cast_index;
+DROP INDEX IF EXISTS cast_pid_index;
+DROP INDEX IF EXISTS cast_mid_index;
+DROP INDEX IF EXISTS movie_index;
+DROP INDEX IF EXISTS actor_id_index;
+DROP INDEX IF EXISTS directors_index;
+DROP INDEX IF EXISTS movie_directors_index;
+DROP INDEX IF EXISTS actor_id_gender_index;
+DROP INDEX IF EXISTS movie_year_index;
+DROP INDEX IF EXISTS actor_name_index;

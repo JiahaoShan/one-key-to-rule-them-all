@@ -1,0 +1,53 @@
+# Project 3 Discussion Notes
+
+## ~BufMgr()
+
+* Interate through BufDescTable
+* Write dirty pages if any
+* Delete bufDescTable and bufPool
+
+## advanceClock()
+
+* Increment the clockHand ...
+
+## allocBuf()
+
+* Perform first part of  clock algorithm to search for open buffer frame
+* Assume non-concurrent access to buffermanager
+* if invalid, use frame
+
+## readPage()
+* check to see if it is already in the buffer pool
+* hash tabl lookup
+* set the referenced bit
+* if not in the buffer pool must allocate a new page
+* alloc a new frame 
+* read the page into the new frame 
+* set up the entry properly 
+* insert in the hash table
+
+
+## unPinPage()
+* lookup in hash table
+* make sure the page is actually pinned
+* decrease pin count
+
+## allocPage()
+
+* allocate a new frame
+* allocate a new page in the file
+* insert in the hash table
+* set up the entity properly in BufDescTable
+
+## disposePage()
+* see if page is in memory
+* if in memory, remove entries from hashTable and bufDescTable
+* delete page
+
+## flushFile()
+* iterate through buffer pool
+* if valid page and page is pinnned, throw exception
+* if dirty page, write to disk
+* remove form hashTable
+* if valid bit is not set but requested file is present, throw exception
+

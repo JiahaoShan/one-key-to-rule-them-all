@@ -10,16 +10,10 @@ Not a good reference. Skip.
 
 SQL
 
-94/100
-
 ## Project 3
 
 Buffer manager for BadgerDB
 
-100/100
-
 ## Project 4
 
 B+ tree C++ implementation for BadgerDB
-
-97.5/100
